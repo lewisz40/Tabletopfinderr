@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <style>
+
+body{background-color: #blue;
+}
+  
+    .left{
+      position: relative;
+      width:300px;
+      height:600px;
+      float:left;
+      left:150px;
+    }
+    .right{
+      position: relative;
+      width:300px;
+      height:600px;
+      float:right;
+      right:150px;
+
+    }
+  }
+
+
+
+  img {
+    
+  position: static;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+  
+    #map {
+      height: 800px;
+      width: 800px;
+      display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+    
+  </style>
+  </head>
+<body>
+  <img src="https://wallscover.com/images/magic-the-gathering-wallpaper-14.jpg" width="90%" height="400"> 
+
+
+  <div class="left"> <img src="http://static.tumblr.com/4d4411af26f1d68820701795920a9b4e/cacjhkw/114mk7f74/tumblr_static_155234_286629371437887_1393242850_n.jpg" width="250" height="100" top="380"></br>
+    Located on the 600 block of Johnson Street (Victoria's "comic book row"), Yellowjacket boasts the city's largest collection of Magic: the Gathering Singles. It is also home to the best attended weekly Magic: the Gathering Tournaments. Yellowjacket is also the homebase for the loadingreadyrun crew who make some of the best magic related vidoes. Magic games are played around the clock so you can drop by anytime and play. Yellowjacket also has magic tournements going on everyday so there is always something happening. </br>
+  Yellowjacket is located at 649 Johnson St. Victoria. </br>
+  Call at: 250 480-0049
+</div>
+    
+  <div class="right"> <img src="http://pokemonbc.com/wp-content/uploads/2016/06/10012278_1616621298563850_5356475920638693045_o-400x400.png" width="280" height="100"></br>
+  Triple  Play Sports & Games opened its doors in May 2014 in Esquimalt,  British Columbia.  Jason Sarrazin had his own iconic Field of Dreams  moment … “If I build it, they will come” after retiring from 17 years in  the Canadian Armed Forces.  He wanted to reignite the spark of passion  for collecting amongst sports fans, both young and old, and welcome  players from Victoria’s thriving gaming community. Staff at  Triple Play are ready to introduce young collectors to the joys of  opening a fresh pack of sports cards, or to assist the seasoned  collector in finding that perfect showcase item to take their collection  to the next level. 
+Triple  Play also hosts a regular schedule of Magic: The Gathering and other  gaming events for players looking to spend a few hours immersed in their  favourite game with friends.  </br>
+ Triple Play Sports & Gaming Cards is located at 1209 Wharf St. Victoria </br>
+  Call at: 250-384-3311
+    </div>
+
+
+  <div id="map"></div>
+  <script>
+   function initMap() {
+      var YJ = {lat: 48.427167,lng:-123.365299};
+      var TP = {lat: 48.426129, lng: -123.369905};
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 16,
+        center: YJ
+      });
+      var marker = new google.maps.Marker({
+        position: YJ,
+        map: map
+    
+      });
+    var marker = new google.maps.Marker({
+        position: TP,
+        map: map
+    
+      });
+    
+    }
+  </script>
+  
+    
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIBMaladfi1YQe_02U_ap5ZPuEblvgNEo&callback=initMap">
+  </script>
+  </body>
+</html>

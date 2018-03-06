@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<style>
+
+body{background-color: #white;
+}
+	
+		.left{
+			position: relative;
+			width:300px;
+			height:600px;
+			float:left;
+			left:150px;
+		}
+		.right{
+			position: relative;
+			width:300px;
+			height:600px;
+			float:right;
+			right:150px;
+
+		}
+	}
+
+
+
+	img {
+		
+	position: static;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+	
+   	#map {
+    	height: 800px;
+    	width: 800px;
+    	display: block;
+    margin-left: auto;
+    margin-right: auto;
+	}
+   	
+	</style>
+  </head>
+<body>
+	<img src="http://www.enworld.org/forum/attachment.php?attachmentid=62061&d=1402069890" width="100%" height="600"> 
+
+
+	<div class="left"> <img src="http://www.ibgcafe.com/wp-content/uploads/2014/03/logo-padding.png" width="250" height="100" top="380"></br>
+		Interactivity Board Game Café is a café with a massive library of games to play while eat or drink coffee! With board game experts available to teach you new games you will never lack for entertainment. Interactivity is also an excellent place to set up and play Dungeons & Dragons. For only $5 you can play at one of their many tables for as long as you want. Due to their popularity Interactivity has expanded their venue to include far more tables ensuring there is always a spot open. Worried about brining your own books and dice, fear not you can bring your own games to Interactivity. With a number of delicious snacks Interactivity is the perfect place to spend a rainy day or any day for that matter. </br>
+	Interactivity Board Game Cafe is located at 723 Yates St. </br>
+	Call at: 250-480-3979
+</div>
+		
+	<div class="right"> <img src="https://scontent.fyvr2-1.fna.fbcdn.net/v/t1.0-9/11891265_923681231052335_2035477979382738742_n.jpg?oh=0aac2411971c47eb0f993de19e73ab07&oe=5B4B8646" width="280" height="100"></br>
+		A staple among the Victoria gaming community Skyhaven has it all. From collectable card games like Yu-Gi-Oh and Magic: The Gathering to Roleplaying Games like Dungeons & Dragons to Pathfiner Skyhaven Games has something for everyone. With a vibriant community backing it Skyhaven Games is the perfect place to make some new friends or play at with your old ones.  </br>
+	Skyhaven Games is located at 3458 Tillicum Rd.</br>
+	Call at: 250-477-1519
+	  </div>
+
+
+	<div id="map"></div>
+	<script>
+  function initMap() {
+    	var IBC = {lat: 48.426154, lng: -123.363916};
+    	var sky = {lat: 48.456277, lng: -123.393199};
+    	var map = new google.maps.Map(document.getElementById('map'), {
+      	zoom: 12,
+      	center: IBC
+    	});
+    	var marker = new google.maps.Marker({
+      	position: IBC,
+      	map: map
+		
+    	});
+
+    	var marker = new google.maps.Marker({
+      	position: sky,
+      	map: map
+		
+    	});
+		
+  	}
+	</script>
+	
+		
+	<script async defer
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIBMaladfi1YQe_02U_ap5ZPuEblvgNEo&callback=initMap">
+	</script>
+  </body>
+</html>

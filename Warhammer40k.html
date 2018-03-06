@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<style>
+
+body{background-color: #808080;
+}
+	
+		.left{
+			position: relative;
+			width:300px;
+			height:600px;
+			float:left;
+			left:150px;
+		}
+		.right{
+			position: relative;
+			width:300px;
+			height:600px;
+			float:right;
+			right:150px;
+
+		}
+	}
+
+
+
+	img {
+		
+	position: static;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+	
+   	#map {
+    	height: 800px;
+    	width: 800px;
+    	display: block;
+    margin-left: auto;
+    margin-right: auto;
+	}
+   	
+	</style>
+  </head>
+<body>
+	<img src="http://arvardardboyz.com/sandbox/wordpress/wp-content/gallery/gamelogos/warhammer-40000-logo.png" width="100%"> 
+
+
+	<div class="left"> <img src="https://vignette.wikia.nocookie.net/warhammerfb/images/5/52/Games-Workshop-Logo.jpg/revision/latest?cb=20141230211328" width="250" height="100" top="380"></br>
+		Games Workshop is the premier miniature wargaming company that created Warhammer 40k. Their local store is located in downtown Victoria and has supplies for your every Warhammer 40k need. The store also has tables that anyone can drop by and use. Their staff is incredibly friendly and welcoming to players of all skill levels. In addition to Warhammer 40k they also supply Games Workshop's other amazing miniature wargames: Warhammer Age of Sigmar and the Lord of the Rings. </br>
+	Games Workshop is located at 625 Johnson St. Victoria. </br>
+	Call at: 250 361-1499
+</div>
+		
+	<div class="right"> <img src="https://d1rw89lz12ur5s.cloudfront.net/photo/gauntletgamesvictoria/file/1430243/bclogo.png?1493518751" width="280" height="100"></br>
+		Gauntlet Games is games store located in Univeristy Heights Victoria. Carrying a large array of games Gauntlet Games has something for everybody from card games to board games to minatures. Gauntlet has an open floor filled with gaming tables that are availiabe for any game. Gauntlet Games is the perfect location to play some games of Warhammer 40k. </br>
+	Gauntlet Games is located at 232-3980 Shelbourne St. Victoria </br>
+	Call at: 778-265-5556
+	  </div>
+
+
+	<div id="map"></div>
+	<script>
+  	function initMap() {
+    	var GWstore = {lat: 48.427223, lng: -123.366231};
+    	var Gaunt = {lat: 48.469937, lng: -123.333596};
+
+    	var map = new google.maps.Map(document.getElementById('map'), {
+      	zoom: 12,
+      	center: GWstore
+    	});
+
+    	var marker = new google.maps.Marker({
+      	position: GWstore,
+      	map: map
+		
+    	});
+
+		var marker = new google.maps.Marker({
+      	position: Gaunt,
+      	map: map
+		
+    	});
+  	}
+	</script>
+	
+		
+	<script async defer
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIBMaladfi1YQe_02U_ap5ZPuEblvgNEo&callback=initMap">
+	</script>
+  </body>
+</html>
